@@ -21,7 +21,7 @@ public class EventQueryRepository {
 
   public List<Event> lookup(EventLookupRequest request) {
     List<String> timeKeyPatterns = keyPatternFactory
-        .getTimeKeyPatterns(request.timeType(), request.timeRange());
+        .getKeyPatternsByTimeAndType(request.timeType(), request.timeRange(), request.type());
 
     List<String> keys = findKeysByPatterns(timeKeyPatterns);
 

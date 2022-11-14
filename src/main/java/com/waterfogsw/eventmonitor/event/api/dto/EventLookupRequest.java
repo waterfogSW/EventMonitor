@@ -1,7 +1,7 @@
 package com.waterfogsw.eventmonitor.event.api.dto;
 
 public record EventLookupRequest(
-    String type,
+    EventType type,
     TimeType timeType,
     int timeRange
 ) {
