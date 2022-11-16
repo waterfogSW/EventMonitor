@@ -34,7 +34,7 @@ public class EventQueryRepository {
                       .map(redisTemplate::keys)
                       .filter(Objects::nonNull)
                       .flatMap(Set::stream)
-                      .collect(Collectors.toList());
+                      .toList();
   }
 
 }

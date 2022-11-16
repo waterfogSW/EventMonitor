@@ -3,7 +3,6 @@ package com.waterfogsw.eventmonitor.event.domain;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
@@ -29,7 +28,7 @@ public class KeyPatternFactory {
 
     return getTimeKeyPatternBetween(startAt, endAt).parallelStream()
                                                    .map(s -> s + "::" + type)
-                                                   .collect(Collectors.toList());
+                                                   .toList();
   }
 
   public List<String> getTimeKeyPatternBetween(
